@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Турагенство</title>
+    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="Main.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+<body>  
+    <header class="main-header" id="main-header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип">
+        </div>
+    
+        <div class="text-links">
+            <a href="file:///C:/Users/%D0%86%D1%80%D0%B0/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0/Main.html">Головна</a>
+            <a href="file:///C:/Users/Ira/OneDrive%20-%20%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%BE%D0%BB%D1%96%D1%82%D0%B5%D1%85%D0%BD%D1%96%D1%87%D0%BD%D0%B8%D0%B9%20%D1%84%D0%B0%D1%85%D0%BE%D0%B2%D0%B8%D0%B9%20%D0%BA%D0%BE%D0%BB%D0%B5%D0%B4%D0%B6/%D0%A0%D0%BE%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D1%96%D0%BB/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0/information.html#">Про нас</a>
+            <a href="file:///C:/Users/%D0%86%D1%80%D0%B0/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0/Tour.html">Тури</a>
+        </div>
+    
+        <div class="search">
+            <form action="#" method="GET">
+                <input type="text" name="search" placeholder="">
+                <button type="submit">Пошук</button>
+            </form>
+        </div>
+
+
+    
+        <div class="icons-container">
+            <a href="#" id="registerLink"></a>
+            <img src="images/person.png" alt="Особистий кабінет" class="personal-account-icon" id="personalAccountIcon">
+        </div>
+        
+        <div id="registrationModal" class="modal">
+            <div class="modal-content">
+                <span class="close"></span>
+    
+                <div class="main">
+                    <div class="containe a-containe" id="a-containe">
+                        <form id="a-form" class="form" method="" action="">
+                            <h2 class="form_title title">Зареєструватися</h2>
+                           
+                            <div class="form_div">
+                                <input type="text" class="form_input" placeholder="ПІБ">
+                            </div>
+                            <div class="form_div">
+                                <input type="email" class="form_input" placeholder="Електрона пошта">
+                            </div>
+                            <div class="form_div">
+                                <input type="password" class="form_input" placeholder="Пароль">
+                            </div>
+                            <input type="submit" class="form_button" value="Створити">
+                            <p class="form_text">
+                                Вже є аккаунт? <a href="#" id="a-link" class="form_a">Авторизуватися</a>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="containe b-containe" id="b-containe">
+                        <form id="b-form" class="form" method="" action="">
+                            <h2 class="form_title title">Авторизуватися</h2>
+                            
+                            <div class="form_div">
+                                <input type="email" class="form_input" placeholder="Електрона пошта">
+                            </div>
+                            <div class="form_div">
+                                <input type="password" class="form_input" placeholder="Пароль">
+                            </div>
+                            <input type="submit" class="form_button" value="Авторизуватися">
+                            <p class="form_text">
+                                Немає облікового запису? <a href="#" id="b-link" class="form_a">Зареєструватися</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <script src="Main.js"></script>
+            
+            
+        
+    </header>
+    
+    
+    <div class="video-container">
+        <video src="https://videos.pexels.com/video-files/1918465/1918465-hd_1920_1080_24fps.mp4" autoplay muted loop></video>
+        <div class="content-overlay">
+            <h1>Дозвольте мріям стати реальністю з DreamTrip - 
+                <br> ваша незабутня подорож починається тут!</h1>
+        <a href="#bottom" class="video-overlay__button" onclick="scrollToBottom()">Вибрати подорож</a>
+        </div>
+    </div>
+    <div class="animated" data-aos="fade-up">
+        <h1>Подорожі від високих вершин до морських хвиль: Оберіть свою ідеальну пригоду!</h1>
+    </div>
+<div class="season">
+    <div class="circle" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://i.pinimg.com/564x/23/5a/28/235a2872b86591c68d5ce9fa011dd6cf.jpg" alt="Картинка 1">
+        <div class="circle-text">Гірські тури</div>
+        <div class="circle-description">Гірські тури: захоплюючі враження серед величних вершин.
+
+        </div>
+    </div>
+    <div class="circle" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://i.pinimg.com/564x/cf/f6/b5/cff6b59d4c8ff58f5750f2c4b630f305.jpg" alt="Картинка 2">
+        <div class="circle-text">Пляжні тури</div>
+        <div class="circle-description">Пляжні тури: блискучий відпочинок поруч з океаном, де кожен момент - надзвичайний.</div>
+    </div>
+    <div class="circle" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://i.pinimg.com/564x/cd/0d/de/cd0dde3e5d185f180584fd26da9872c5.jpg" alt="Картинка 3">
+        <div class="circle-text">Екскурсійні тури</div>
+        <div class="circle-description">Екскурсійні тури: доторкніться до неповторної краси та історії кожного міста у захопливих подорожах.</div>
+    </div>
+    <div class="circle" data-aos="fade-up" data-aos-delay="400">
+        <img src="https://i.pinimg.com/564x/81/a1/f1/81a1f1427aefbeab0043a16a78a4772d.jpg" alt="Картинка 4">
+        <div class="circle-text">Пригодницькі тури</div>
+        <div class="circle-description">Пригодницькі тури: де кожен момент наповнений захопленням та неймовірними враженнями."</div>
+    </div>
+</div>
+
+<div class="text">
+    <h1>Гарячі Тури</h1>
+</div>
+<div class="category-container" onclick="changeCategory(event)">
+    <div class="category" data-type="all">
+        <img src="images/earth.png" alt="Mountain Tour Icon">
+        <p>Всі тури</p>
+    </div>
+
+    <div class="category" data-type="mountain">
+        <img src="images/goru.png" alt="Mountain Tour Icon">
+        <p>Гірський тур</p>
+    </div>
+
+    <div class="category" data-type="beach">
+        <img src="images/beach.png" alt="Beach Tour Icon">
+        <p>Пляжний тур</p>
+    </div>
+
+    <div class="category" data-type="excursion">
+        <img src="images/arhitec.png" alt="Excursion Tour Icon">
+        <p>Екскурсійний тур</p>
+    </div>
+
+    <div class="category" data-type="adventure">
+        <img src="images/tur.png" alt="Adventure Tour Icon">
+        <p>Пригодницький тур</p>
+    </div>
+</div>
+
+
+
+<div class="main-content">
+    <div class="jewelry" data-type="mountain">
+        <img src="https://st3.depositphotos.com/1053932/14472/i/600/depositphotos_144723131-stock-photo-eiffel-tower-in-paris-under.jpg" alt="Каблучок"  class="clickable-image">
+        <h2>Франція ( Париж )</h2>
+        <p>Тривалість туру 7 днів</p>
+        <P>З 12.05 по 19.05</P>
+        <p>7 500 ГРН</p>
+        <a>Детальніше</a>
+        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path class="heart-path" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+
+    </div>
+
+    <div class="jewelry" data-type="beach">
+        <img src="https://st.depositphotos.com/1000633/2443/i/600/depositphotos_24433313-stock-photo-colosseum-in-rome-italy.jpg" alt="Каблучок"  class="clickable-image">
+        <h2>Італія ( Рим )</h2>
+        <p>Тривалість туру 7 днів</p>
+        <P>З 12.05 по 19.05</P>
+        <p>10 500 ГРН</p>
+        <a>Детальніше</a>
+        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path class="heart-path" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        
+    </div>
+
+    <div class="jewelry" data-type="excursion">
+        <img src="https://st.depositphotos.com/1370037/1285/i/600/depositphotos_12859071-stock-photo-the-blue-mosque.jpg" alt="Каблучок"  class="clickable-image">
+        <h2>Турція ( Стамбул )</h2>
+        <p>Тривалість туру 7 днів</p>
+        <P>З 12.05 по 19.05</P>
+        <p>3 500 ГРН</p>
+        <a>Детальніше</a>
+        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path class="heart-path" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+    </div>
+
+    <div class="jewelry" data-type="adventure">
+        <img src="https://img.freepik.com/free-photo/vertical-picture-river-forest-with-rocks-cloudy-sky_181624-12497.jpg?t=st=1712768220~exp=1712771820~hmac=0bb5e7f922fecce15ef68c91d1f218efaffb3dc05657ed0dacec1515dd601df0&w=360" alt="Каблучок"  class="clickable-image">
+        <h2>США ( Аляска )</h2>
+        <p>Тривалість туру 6 днів</p>
+        <P>З 12.05 по 19.05</P>
+        <p>7 500 ГРН</p>
+        <a>Детальніше</a>
+        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path class="heart-path" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+    </div>
+</div>
+
+
+  <div class="animated-title" data-aos="fade-up">
+  <div class="section-title">
+    <h1>Забезпечуйте Свою Мандрівку Комфортом: Наші Унікальні Послуги Під Час Бронювання Туру!</h1>
+    <div class="pos">
+    <p>При бронюванні через наше турагентство, ми гарантуємо вам безпроблемний та комфортний відпочинок з усіма зручностями. Наші послуги включають </p>
+    </div></div>
+    <div class="icons-section">
+        <div class="icon">
+            <img src="images/avia.png" alt="Icon 1">
+            <h2>Авіаквитки</h2>
+            <p>Вигідні ціни на комфортні перельоти вже включені у ваш тур. Без додаткового оформлення.</p>
+        </div>
+        <div class="icon">
+            <img src="images/hotel.png" alt="Icon 2">
+            <h2>Проживання</h2>
+            <p>Ми також забезпечуємо бронювання готелів за приємною ціною з прекрасним видом та територією. </p>
+        </div>
+        <div class="icon">
+            <img src="images/insurance-policy.png" alt="Icon 3">
+            <h2>Візи та страхування</h2>
+            <p>Наше турагентство пропонує повний спектр послуг з оформлення віз та страхування для вашої подорожі. </p>
+        </div>
+        <div class="icon">
+            <img src="images/24-hours.png" alt="Icon 4">
+            <h2>Ми завжди на зв'язку</h2>
+            <p>Наша команда готова надати вам підтримку 24/7. Незалежно від часових поясів та обставин.</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Dream<span>trip</span></h3>
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Головна</a>
+          
+          <a href="file:///C:/Users/%D0%86%D1%80%D0%B0/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0/Tour.html">Тури</a>
+        
+          <a href="#">Кабінет</a>
+        
+        </p>
+
+        <p class="footer-company-name">DreamTrip © 2024</p>
+      </div>
+
+
+        <div class="footer-center">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span>Героїв Майдану 2а</span> Чернівці Україна</p>
+            </div>
+          
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+380236477654</a></p>
+            </div>
+          
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:support@company.com">dreamtrip@company.com</a></p>
+            </div>
+          </div>
+        
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>Подорожуй тільки з нами </span>
+          Ми - найкраща туристична компанія, яка створена для того, щоб здійснити ваші мрії.
+          Довірте нам свої подорожі, і ми зробимо їх незабутніми!
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="https://www.facebook.com/?locale=uk_UA"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/?lang=uk"><i class="fa fa-twitter"></i></a>
+          <a href="https://ua.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>  
+      
+    
+</body>
+</html>

@@ -1,0 +1,586 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Забороняє горизонтальну прокрутку */
+  overflow-y: auto; /* Дозволяє вертикальну прокрутку при необхідності */
+  background-color:#f0f0f054; /* Задаємо темний колір фону */
+
+}
+
+  
+  .main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Прозорий фон */
+    color: #fff; /* Білий колір тексту */
+    padding: 10px; /* Зменшена висота padding */
+    height: 50px; /* Зменшена висота хедера */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Забезпечення відображення над відео */
+  }
+  
+  .main-header .logo img {
+    width: 180px; /* Зменшена ширина логотипу */
+    height: 180px; /* Автоматична висота, щоб зберегти пропорції */
+    margin-left: 30px; 
+    margin-top: 22px;
+    transition: transform 0.3s ease; /* Анімація збільшення */
+  }
+  
+  .main-header .logo img:hover {
+    transform: scale(1.1); /* Збільшення на 10% при наведенні */
+  }
+  
+  .main-header .text-links {
+    margin-top: 30px; /* Збільшена відстань від верху */
+    margin-right: 34px;
+  }
+  
+  .main-header .text-links a {
+    color: #fff; /* Білий колір тексту */
+    text-decoration: none;
+    margin-right: 35px; /* Зменшений відступ між посиланнями */
+    font-size: 25px; /* Збільшений розмір тексту */
+  }
+    
+  /*******************пошук*****************************************/
+  .search {
+    position: relative;
+    margin-top: 30px;
+    margin-right: 150px;
+  }
+  
+  .search input[type="text"] {
+    padding: 10px 20px;
+    border-radius: 25px; /* Зроблено круглими краї */
+    border: 2px solid white; /* Додано білий контур */
+    background-color: transparent; /* Прозорий фон */
+    width: 250px;
+    outline: none;
+    color: white;
+  }
+  
+  .search input[type="text"]:focus {
+    background-color: rgba(206, 209, 209, 0.842);
+  }
+  
+  .search button[type="submit"] {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Прозорий фон */
+    border: none; /* Видалено контур */
+    border-radius: 25px; /* Зроблено круглими краями */
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+  }
+  /***********************************************************************************
+
+
+  
+  
+  /************************************************************************/
+  .main-header .icons-container {
+    display: flex; /* Розмістити елементи у ряд */
+    align-items: center; /* Вирівняти елементи по центру по вертикалі */
+  }
+  
+  .main-header .icons-container img {
+    width: 35px; /* Збільшена ширина іконок */
+    height: 35px; /* Збільшена висота іконок */
+    margin-right: 10px; /* Однаковий відступ між іконками */
+    margin-left: -100px;
+    margin-top: 30px; /* Збільшена відстань від верху */
+  }
+  
+/*******************************************************************************************/
+
+
+
+/**********************відео *******************************************************************/
+.video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+  
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.7); /* Зменшує яскравість відео на 30% */
+}
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+ .content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, sans-serif; 
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity:0;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: -50px;
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Початок анімації - текст прозорий */
+  }
+  to {
+      opacity: 1; /* Кінець анімації - текст стає видимим */
+  }
+}
+
+.video-overlay__button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid white; 
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 25px; 
+  margin-top: 25px;
+  margin-right: 20px;
+
+}
+
+
+.video-overlay__button:hover {
+  background-color: rgba(206, 209, 209, 0.842);
+}
+
+/**********************************************************************************************************/
+
+
+/*****************************сезони***************************************************************************/
+.season {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 50px;
+}
+
+.circle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #333;
+  margin: 0 40px;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.circle-text, .circle-description {
+  line-height: 1.5; /* Встановити однакову висоту рядка для тексту і опису */
+}
+
+.circle-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px; /* Збільшити відстань від тексту */
+}
+
+.circle-text {
+  font-size: 20px;
+  margin-bottom: 10px; /* Додати додаткову відстань від опису */
+}
+
+.circle-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px; /* Додати додаткову відстань від опису */
+}
+
+
+.animated {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.animated h1 {
+  font-size: 36px;
+  font-weight: lighter; /* Або normal */
+  font-family: Arial, sans-serif; /* Вибір шрифту Arial */
+  margin-top: 30px;
+
+}
+
+/********************************що ми даємо********************************************************************/
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 100px;
+
+}
+
+.section-title h1 {
+  font-size: 24px;
+  color: #000000;
+  font-family: Arial, sans-serif; /* Вибір шрифту Arial */
+  margin-top: -36px;
+  font-weight: lighter; /* Або normal */
+
+
+
+}
+
+.pos {
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial, sans-serif; /* Вибір шрифту Arial */
+
+}
+
+
+.icons-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px; /* Adjust margin as needed */
+}
+
+.icon {
+  text-align: center;
+  width: 20%; /* Adjust width as needed */
+}
+
+.icon img {
+  width: 80px; /* Adjust width as needed */
+  height: 80px; /* Adjust height as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.icon h2 {
+  font-size: 18px; /* Adjust font size as needed */
+  margin-bottom: 25px; /* Adjust margin as needed */
+}
+
+.icon p {
+  font-size: 14px; /* Adjust font size as needed */
+  color: #666; /* Adjust color as needed */
+
+}
+/**************************************************************************************
+
+/****************************тури популярні**************************************************/
+
+.category-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  
+
+}
+
+.category {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.category img {
+  width: 50px;
+  height: 50px;
+  
+}
+
+.category p {
+  font-size: 18px;
+  margin-top:1px;
+}
+
+/**********************************************************************/
+
+.text{
+margin-top: 200px;
+margin-left: 540px;
+color: #494949;
+}
+
+.main-content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 20px;
+margin-top: -20px;
+}
+
+.jewelry {
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin: 10px; /* Відступ */
+padding: 10px; /* Відступ */
+text-align: center;
+width: calc(30% - 20px); /* 30% ширини екрану мінус відступи */
+max-width: 270px; /* Максимальна ширина */
+transition: transform 0.3s; /* Анімація для збільшення */
+}
+
+.jewelry img {
+max-width: 100%;
+border-radius: 6px;
+margin-bottom: 10px;
+}
+
+
+.jewelry h2 {
+font-size: 18px;
+margin: 5px 0;
+}
+
+.jewelry p {
+margin: 5px 0;
+font-size: 16px; /* Задаємо однаковий розмір тексту */
+}
+
+
+.main-content .jewelry a {
+display: inline-block;
+background-color: #131a48; /* Change to desired background color */
+color: #fff; /* Text color */
+padding: 10px 20px; /* Adjust padding as needed */
+text-decoration: none;
+border-radius: 5px; /* Rounded corners */
+margin-top: 10px; /* Adjust spacing */
+transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.main-content .jewelry a:hover {
+background-color: #131a48; /* Darker color on hover */
+}
+
+
+
+.heart {
+  fill: rgb(0, 0, 0); /* Колір за замовчуванням */
+  transition: fill 0.3s ease; /* Анімація зміни кольору */
+  cursor: pointer; /* Зміна форми курсору на показник пальця */
+}
+
+.heart:hover {
+  fill: crimson; /* Колір при наведенні */
+}
+
+
+/*********************************************************************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+
+.footer-distributed{
+  background: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #363434;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  rgb(21, 22, 22);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #1a1818;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  color: #333131;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #0f0f0f;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  rgb(23, 24, 24);
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #181717;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #181616;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}

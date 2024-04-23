@@ -1,0 +1,649 @@
+/* хедер */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Заборонити прокручування по горизонталі */
+    background-color:#f0f0f054; /* Задаємо темний колір фону */
+  }
+  
+  
+  .main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Прозорий фон */
+    color: #fff; /* Білий колір тексту */
+    padding: 10px; /* Зменшена висота padding */
+    height: 50px; /* Зменшена висота хедера */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Забезпечення відображення над відео */
+  }
+  
+  .main-header .logo img {
+    width: 180px; /* Зменшена ширина логотипу */
+    height: 180px; /* Автоматична висота, щоб зберегти пропорції */
+    margin-left: 30px; 
+    margin-top: 22px;
+    transition: transform 0.3s ease; /* Анімація збільшення */
+  }
+  
+  .main-header .logo img:hover {
+    transform: scale(1.1); /* Збільшення на 10% при наведенні */
+  }
+  
+  .main-header .text-links {
+    margin-top: 30px; /* Збільшена відстань від верху */
+    margin-right: 34px;
+  }
+  
+  .main-header .text-links a {
+    color: #fff; /* Білий колір тексту */
+    text-decoration: none;
+    margin-right: 35px; /* Зменшений відступ між посиланнями */
+    font-size: 25px; /* Збільшений розмір тексту */
+  }
+  
+  .main-header .text-links a:hover {
+    text-decoration: underline;
+  }in-header .text-links a:hover {
+    text-decoration: underline;
+  }
+  /*******************пошук*****************************************/
+  .search {
+    position: relative;
+    margin-top: 30px;
+    margin-right: 150px;
+  }
+  
+  .search input[type="text"] {
+    padding: 10px 20px;
+    border-radius: 25px; /* Зроблено круглими краї */
+    border: 2px solid white; /* Додано білий контур */
+    background-color: transparent; /* Прозорий фон */
+    width: 250px;
+    outline: none;
+    color: white;
+  }
+  
+  .search input[type="text"]:focus {
+    background-color: rgba(206, 209, 209, 0.842);
+  }
+  
+  .search button[type="submit"] {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Прозорий фон */
+    border: none; /* Видалено контур */
+    border-radius: 25px; /* Зроблено круглими краями */
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  
+  /************************************************************************/
+  .main-header .icons-container {
+    display: flex; /* Розмістити елементи у ряд */
+    align-items: center; /* Вирівняти елементи по центру по вертикалі */
+  }
+  
+  .main-header .icons-container img {
+    width: 35px; /* Збільшена ширина іконок */
+    height: 35px; /* Збільшена висота іконок */
+    margin-right: 10px; /* Однаковий відступ між іконками */
+    margin-left: -100px;
+    margin-top: 30px; /* Збільшена відстань від верху */
+  }
+  
+  /**********************відео *******************************************************************/
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.7); /* Зменшує яскравість відео на 30% */
+  }
+  
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+  }
+  .content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: Arial, sans-serif; 
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity:0;
+    white-space: nowrap;
+    overflow: hidden;
+    top: 300px;
+    line-height: 1.6; /* Збільшуємо міжрядковий інтервал для покращення читабельності */
+    font-weight: normal; /* Забираємо жирність тексту */
+  }
+  
+  
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0; /* Початок анімації - текст прозорий */
+    }
+    to {
+        opacity: 1; /* Кінець анімації - текст стає видимим */
+    }
+  }
+  
+  
+  
+  /**********************************************************************************************************/
+  
+  
+  
+  /* Горизонтальний текст */
+  .horizontal-text-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .horizontal-text {
+    width: 260px;
+    text-align: center;
+    margin: 0 10px;
+  }
+  
+  .horizontal-text h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .horizontal-text a {
+    text-decoration: none;
+    color: #333; /* Колір тексту по замовчуванню */
+  }
+  
+  .horizontal-text a:hover {
+    color: #3c4a6d; /* Колір ціни */
+  }
+  /***********************************************************************************/
+  
+  /* Загальні стилі */
+  body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px; /* Збільшуємо розмір шрифту */
+    line-height: 1.6; /* Збільшуємо міжрядковий інтервал для покращення читабельності */
+    color: #30384c; /* Змінюємо колір тексту на темно-сірий для кращої читабельності */
+  }
+  
+  /* Стилі для контейнера */
+  .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Стилі для рядка */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 13px;
+    
+  }
+  
+  /* Стилі для колонок */
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    margin-top: -15px;
+  
+  }
+  
+  
+  
+  .tour-title {
+    font-size: 24px; /* Розмір шрифту */
+    font-weight: bold; /* Жирний шрифт */
+    color: #333; /* Колір тексту */
+    text-align: center; /* Вирівнювання тексту по центру */
+    margin-bottom: 20px; /* Відступ знизу */
+  }
+  
+  
+  
+  
+  
+  /**********************************************************************/
+  
+  
+  .additional-info {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    width: 40%; /* Зменшено ширину блоку */
+    border-radius: 20px;
+    padding: 20px; /* Зменшено внутрішні відступи */
+    margin-left: 50px;
+  }
+  
+  .additional-info p {
+    position: relative;
+    margin-left: 25px;
+    line-height: 2.0; /* Збільшуємо міжрядковий інтервал для покращення читабельності */
+  font-size: 20px;
+    
+  }
+  
+  
+  .additional-info span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #252424; /* Adjust the color as needed */
+    top: 250px;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .additional-info .price-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8em; /* Adjust the font size as needed */
+    color: #888; /* Adjust the color as needed */
+    top: 290px;
+  }
+  
+  
+  .additional-info a.button {
+    text-align: center;
+    background-color: #3c4a6d; /* Колір ціни */
+    color: white;
+    padding: 12px 24px; /* Увеличиваем отступы для увеличения размера кнопки */
+    text-decoration: none;
+    font-size: 16px; /* Увеличиваем размер шрифта */
+    border-radius: 30px; /* Делаем кнопку более круглой */
+    transition: all 0.3s ease; /* Добавляем анимацию */
+    margin-left: 20px;
+  margin-top: 30px;
+  position: absolute;
+  
+  }
+  
+  .additional-info a.button:hover {
+    background-color:#3c4a6d;  /* Темнее зелёный цвет при наведении */
+    transform: scale(1.1); /* Добавляем эффект масштабирования при наведении */
+  }
+  
+  
+  .details{
+    font-size: 1rem;
+    line-height: 25px;
+    font-family: 'Rubik',sans-serif;
+    color: #3c4a6dcc;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    list-style: disc;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    top: 100px;
+  }
+  /**********************************************************************************************************/
+  
+  .text{
+    margin-top: 40px;
+    margin-left: 450px;
+    color: #494949;
+    }
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: 30px;
+    }
+    
+    .jewelry {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Відступ */
+    padding: 10px; /* Відступ */
+    text-align: center;
+    width: calc(30% - 20px); /* 30% ширини екрану мінус відступи */
+    max-width: 270px; /* Максимальна ширина */
+    transition: transform 0.3s; /* Анімація для збільшення */
+    }
+    
+    .jewelry img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    }
+    
+    
+    .jewelry h2 {
+    font-size: 18px;
+    margin: 5px 0;
+    }
+    
+    .jewelry p {
+    margin: 5px 0;
+    font-size: 16px; /* Задаємо однаковий розмір тексту */
+    }
+    
+    
+  
+  
+  
+  /**********************************************************************************************************/
+  .progtex {
+    margin-top: 20px;
+    margin-left: 500px;
+    color: #3c4a6d;
+  
+  }
+  
+  
+  .day {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: -50px;
+    font-family: 'Rubik',sans-serif;
+    list-style: none;
+    box-sizing: border-box;
+    line-height: 32px;
+    padding-left: 35px;
+    color: #272727e7;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    z-index: 100;
+    position: relative;
+    background-position: 0px 3px;
+    font-weight: bold; /* Товщина шрифту */
+  
+  }
+  
+  .green-text {
+    color: #2449a8; /* Green color for text when clicked */
+  }
+  .expand-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #3c4a6d;
+    color: #ffffff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 5px;
+    
+  }
+  .expand-icon.green {
+    background-color: #2449a8; /* Green color for text when clicked */
+    ;
+  }
+  .content {
+    display: none;
+    margin-left: 40px;
+    
+  }
+  .daycont {
+    margin-left: 45px;
+    margin-top: -2px;
+    font-size: 20px;
+  color: rgb(32, 30, 30);
+  
+  
+  }
+  
+  
+  /******************************************************************************************************/
+  
+  .var{
+    margin-top: 50px;
+    margin-left: 50px;
+    font-family: Arial, sans-serif; /* Change the font to Arial or any other desired font */
+    font-size: 30px; /* Розмір тексту */
+    color: #3c4a6d;
+    
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .included, .not-included {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .included {
+    background-color: #f0eeee;
+  }
+  .not-included {
+    background-color: #f0eeee;
+    margin-bottom: 40px; /* Відступ знизу */
+  
+  }
+  
+  
+  /***************************************************************************************************/
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+  
+  * {
+    font-family: Open Sans;
+  }
+  
+  .footer-distributed{
+    background: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+    width: 40%;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3{
+    color:  #363434;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+  }
+  
+  .footer-distributed h3 span{
+    color:  rgb(21, 22, 22);
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+    color:  #1a1818;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer-distributed .footer-company-name{
+    color:  #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center{
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i{
+    color: #333131;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #0f0f0f;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+  
+  .footer-distributed .footer-center p a{
+    color:  rgb(23, 24, 24);
+    text-decoration: none;;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #181717;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+    width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-distributed .footer-icons{
+    margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #181616;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+  
+    .footer-distributed{
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .footer-distributed .footer-center i{
+      margin-left: 0;
+    }
+  
+  }
